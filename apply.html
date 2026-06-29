@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request access · Crosby Ops</title>
+  <meta name="description" content="Apply to use Crosby Ops in your hospitality venue." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
+          <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">Crosby<span class="brand-text-ops">Ops</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/" class="nav-link">Back to home</a>
+      <a href="https://app.crosbyops.com" class="nav-cta">Sign in</a>
+    </nav>
+  </header>
+
+  <main class="apply">
+    <div class="apply-inner">
+      <div class="eyebrow">Request access</div>
+      <h1 class="apply-title">Tell us about your venue.</h1>
+      <p class="apply-sub">
+        Crosby Ops is invite-only while we onboard the first wave of stores.
+        Fill in a few details and we will be in touch within two business days.
+      </p>
+
+      <!--
+        Form action: replace ACTION_URL with your Formspree (or similar)
+        endpoint. Until then, the form falls back to a mailto: submission so
+        nothing 404s. Setup steps in README.md.
+      -->
+      <form
+        class="apply-form"
+        action="mailto:hello@crosbyops.com"
+        method="POST"
+        enctype="text/plain"
+      >
+        <div class="form-row">
+          <label class="form-label" for="name">Your name</label>
+          <input class="form-input" id="name" name="name" type="text" required autocomplete="name" />
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" id="email" name="email" type="email" required autocomplete="email" />
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="venue">Venue or business name</label>
+          <input class="form-input" id="venue" name="venue" type="text" required />
+        </div>
+
+        <div class="form-row two-col">
+          <div>
+            <label class="form-label" for="stores">How many venues?</label>
+            <select class="form-input" id="stores" name="stores" required>
+              <option value="">Select</option>
+              <option>1</option>
+              <option>2 to 4</option>
+              <option>5 to 10</option>
+              <option>10+</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label" for="staff">Staff across all venues</label>
+            <select class="form-input" id="staff" name="staff" required>
+              <option value="">Select</option>
+              <option>Under 10</option>
+              <option>10 to 25</option>
+              <option>25 to 50</option>
+              <option>50+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="modules">Which parts interest you most?</label>
+          <select class="form-input" id="modules" name="modules">
+            <option value="">Select</option>
+            <option>Rostering</option>
+            <option>Timesheets and payroll export</option>
+            <option>Purchasing and invoices</option>
+            <option>Leave and HR</option>
+            <option>All of it</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="notes">Anything else we should know?</label>
+          <textarea class="form-input" id="notes" name="notes" rows="4" placeholder="Optional. Current systems, pain points, timing."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Send request</button>
+          <p class="form-fineprint">
+            We will only use these details to get back to you. No marketing list.
+          </p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Crosby Ops</div>
+      <div class="footer-meta">
+        <a href="https://app.crosbyops.com">Sign in</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <span>&copy; <span id="year">2026</span> Crosby Ops</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear()
+  </script>
+</body>
+</html>
