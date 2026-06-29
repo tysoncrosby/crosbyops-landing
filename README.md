@@ -59,7 +59,7 @@ two sites stay visually consistent.
 
 ## Wire up the request-access form
 
-`apply.html` currently posts to `mailto:hello@crosbyops.com` as a
+`apply.html` currently posts to `mailto:support@crosbyops.com` as a
 zero-setup fallback. That works but the UX is rough (opens the user's
 email client). When you want a proper inbox + database of leads, swap
 in a free form-handler. Recommended: **Formspree**.
@@ -71,7 +71,7 @@ in a free form-handler. Recommended: **Formspree**.
    ```html
    <form
      class="apply-form"
-     action="mailto:hello@crosbyops.com"
+     action="mailto:support@crosbyops.com"
      method="POST"
      enctype="text/plain"
    >
