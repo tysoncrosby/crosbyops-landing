@@ -75,52 +75,102 @@
           </div>
           <div class="feature-mock">
             <div class="app-window">
-              <div class="app-window-bar">
-                <span class="win-mark" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" width="16" height="16" fill="none">
-                    <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-                <span class="win-title">Rostering · Week of 30 Jun</span>
-              </div>
               <div class="app-window-body" data-mock="rostering">
-                <div class="mk-roster">
-                  <div class="mk-roster-grid">
-                    <div class="mk-rcell mk-rhead"></div>
-                    <div class="mk-rcell mk-rhead">Mon</div>
-                    <div class="mk-rcell mk-rhead">Tue</div>
-                    <div class="mk-rcell mk-rhead">Wed</div>
-                    <div class="mk-rcell mk-rhead">Thu</div>
-                    <div class="mk-rcell mk-rhead">Fri</div>
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 32 32" width="15" height="15" fill="none" aria-hidden="true">
+                      <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Crosby<span class="ops">Ops</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab active">Workforce</span>
+                    <span class="mk-nav-tab">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">TC</span>
+                  </span>
+                </div>
 
-                    <div class="mk-rcell mk-rname">Maya R.</div>
-                    <div class="mk-rcell"><span class="mk-shift sh-orange">7–3</span></div>
-                    <div class="mk-rcell"><span class="mk-shift sh-orange">7–3</span></div>
-                    <div class="mk-rcell"></div>
-                    <div class="mk-rcell"><span class="mk-shift sh-orange">7–3</span></div>
-                    <div class="mk-rcell"><span class="mk-shift sh-orange">7–3</span></div>
+                <div class="mk-head">
+                  <div class="mk-crumb">Workforce / Rosters <span class="mk-tag">DRAFT</span></div>
+                  <h4 class="mk-title">Roster <span class="muted">· 6–12 Jul 2026</span></h4>
+                </div>
 
-                    <div class="mk-rcell mk-rname">Jack T.</div>
-                    <div class="mk-rcell"><span class="mk-shift sh-gold">3–11</span></div>
-                    <div class="mk-rcell"></div>
-                    <div class="mk-rcell"><span class="mk-shift sh-gold">3–11</span></div>
-                    <div class="mk-rcell"><span class="mk-shift sh-gold">3–11</span></div>
-                    <div class="mk-rcell"><span class="mk-shift sh-gold">3–11</span></div>
-
-                    <div class="mk-rcell mk-rname">Priya S.</div>
-                    <div class="mk-rcell"></div>
-                    <div class="mk-rcell"><span class="mk-shift sh-navy">5–9</span></div>
-                    <div class="mk-rcell"><span class="mk-shift sh-navy">5–9</span></div>
-                    <div class="mk-rcell"></div>
-                    <div class="mk-rcell"><span class="mk-shift sh-navy">5–9</span></div>
-                  </div>
-                  <div class="mk-cost">
-                    <div>
-                      <div class="mk-cost-label">Wage cost</div>
-                      <div class="mk-cost-value">$4,820 <span class="mk-cost-pct">28.4%</span></div>
+                <div class="mk-banner">
+                  <div class="mk-banner-grid">
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Total wage cost</div>
+                      <div class="mk-metric-value">$11,540</div>
+                      <div class="mk-metric-sub"><strong>280</strong> of 257 hrs</div>
                     </div>
-                    <span class="pill pill-green">● On budget</span>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Gross revenue</div>
+                      <div class="mk-metric-value">$33,260</div>
+                      <div class="mk-metric-sub">Forecast from Turnover</div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Wage cost % <span class="mk-metric-dot bad"></span></div>
+                      <div class="mk-metric-value">38.2<span class="pct">%</span></div>
+                      <div class="mk-bar-wrap">
+                        <div class="mk-bar">
+                          <span class="mk-bar-zone green" style="width:52%"></span>
+                          <span class="mk-bar-zone amber" style="width:24%"></span>
+                          <span class="mk-bar-zone red" style="width:24%"></span>
+                        </div>
+                        <span class="mk-bar-marker" style="left:79%"></span>
+                      </div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Sales / labour hr</div>
+                      <div class="mk-metric-value">$108</div>
+                      <div class="mk-metric-sub">Target <strong>$118/h</strong></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mk-card">
+                  <div class="mk-rg-head">
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Staff</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Mon 6</span><span class="mk-rg-daycost over">41.9%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Tue 7</span><span class="mk-rg-daycost safe">33.2%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Wed 8</span><span class="mk-rg-daycost warn">38.0%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Thu 9</span><span class="mk-rg-daycost safe">30.0%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Fri 10</span><span class="mk-rg-daycost safe">28.3%</span></div>
+                  </div>
+
+                  <div class="mk-rg-section">Front of House</div>
+
+                  <div class="mk-rg-row">
+                    <div class="mk-rg-staff"><span class="mk-rg-staff-name">Maya R.</span><span class="mk-rg-staff-sub">Full time · 38h</span></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FF6B35"><span class="t">7am–3pm</span><span class="b">30 min break</span><span class="c">$298</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FF6B35"><span class="t">7am–3pm</span><span class="b">30 min break</span><span class="c">$298</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FF6B35"><span class="t">9am–5pm</span><span class="b">30 min break</span><span class="c">$176</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-leave"><span class="lt">Annual leave</span><span class="lm">All day</span></div></div>
+                  </div>
+
+                  <div class="mk-rg-row">
+                    <div class="mk-rg-staff"><span class="mk-rg-staff-name">Jack T.</span><span class="mk-rg-staff-sub">Casual · 24h</span></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FFC857"><span class="t">3pm–11pm</span><span class="b">30 min break</span><span class="c">$124</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FFC857"><span class="t">3pm–11pm</span><span class="b">30 min break</span><span class="c">$176</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FFC857"><span class="t">3pm–11pm</span><span class="b">30 min break</span><span class="c">$201</span></div></div>
+                  </div>
+
+                  <div class="mk-rg-row">
+                    <div class="mk-rg-staff"><span class="mk-rg-staff-name">Priya S.</span><span class="mk-rg-staff-sub">Casual · 18h</span></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#1A2D52"><span class="t">5pm–9pm</span><span class="c">$118</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#1A2D52"><span class="t">5pm–9pm</span><span class="c">$118</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#1A2D52"><span class="t">5pm–9pm</span><span class="c">$118</span></div></div>
                   </div>
                 </div>
               </div>
@@ -145,41 +195,78 @@
           </div>
           <div class="feature-mock">
             <div class="app-window">
-              <div class="app-window-bar">
-                <span class="win-mark" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" width="16" height="16" fill="none">
-                    <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-                <span class="win-title">Timesheets · Week of 23 Jun</span>
-              </div>
               <div class="app-window-body" data-mock="timesheets">
-                <div class="mk-rows">
-                  <div class="mk-row">
-                    <span class="mk-row-name">Maya R.</span>
-                    <span class="mk-row-meta">38.0 hrs</span>
-                    <span class="pill pill-green">Approved</span>
-                  </div>
-                  <div class="mk-row">
-                    <span class="mk-row-name">Jack T.</span>
-                    <span class="mk-row-meta">32.5 hrs</span>
-                    <span class="pill pill-green">Approved</span>
-                  </div>
-                  <div class="mk-row">
-                    <span class="mk-row-name">Priya S.</span>
-                    <span class="mk-row-meta">21.0 hrs</span>
-                    <span class="pill pill-amber">Pending</span>
-                  </div>
-                  <div class="mk-row">
-                    <span class="mk-row-name">Liam W.</span>
-                    <span class="mk-row-meta">40.0 hrs</span>
-                    <span class="pill pill-green">Approved</span>
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 32 32" width="15" height="15" fill="none" aria-hidden="true">
+                      <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Crosby<span class="ops">Ops</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab active">Workforce</span>
+                    <span class="mk-nav-tab">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">TC</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Workforce / Timesheets</div>
+                  <h4 class="mk-title">Timesheets <span class="muted">· 6–12 Jul 2026</span></h4>
+                </div>
+
+                <div class="mk-banner">
+                  <div class="mk-banner-grid">
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Total hours</div>
+                      <div class="mk-metric-value">280<span class="pct"> hrs</span></div>
+                      <div class="mk-metric-sub">45 shifts this week</div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Wages cost</div>
+                      <div class="mk-metric-value">$11,540</div>
+                      <div class="mk-metric-sub">Incl. super &amp; workcover</div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Approved <span class="mk-metric-dot warn"></span></div>
+                      <div class="mk-metric-value">0<span class="pct"> / 45</span></div>
+                      <div class="mk-metric-sub">45 pending review</div>
+                    </div>
                   </div>
                 </div>
-                <div class="mk-foot">
-                  <span class="mk-foot-meta">131.5 hrs · 4 staff</span>
-                  <span class="mk-btn">Export to Xero</span>
+
+                <div class="mk-tabs">
+                  <span class="mk-tab active">All<span class="n">45</span></span>
+                  <span class="mk-tab">Needs review<span class="n">45</span></span>
+                  <span class="mk-tab">Approved<span class="n">0</span></span>
+                </div>
+
+                <div class="mk-ts">
+                  <div class="mk-ts-row">
+                    <span class="mk-ava">AS</span>
+                    <span class="mk-ts-info"><span class="mk-ts-name">Ava S.</span><div class="mk-ts-meta">Casual · 1 shift · 4.50 hrs</div></span>
+                    <span class="mk-pill-pending">Pending</span>
+                    <span class="mk-btn-navy">Approve all</span>
+                  </div>
+                  <div class="mk-ts-row">
+                    <span class="mk-ava">EA</span>
+                    <span class="mk-ts-info"><span class="mk-ts-name">Eve A.</span><div class="mk-ts-meta">Casual · 6 shifts · 34.25 hrs</div></span>
+                    <span class="mk-pill-pending">Pending</span>
+                    <span class="mk-btn-navy">Approve all</span>
+                  </div>
+                  <div class="mk-ts-row">
+                    <span class="mk-ava green">TC</span>
+                    <span class="mk-ts-info"><span class="mk-ts-name">Tom C.</span><div class="mk-ts-meta">Full time · 5 shifts · 38.00 hrs</div></span>
+                    <span class="mk-pill-approved">Approved</span>
+                    <span class="mk-btn-navy">View</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -204,36 +291,67 @@
           </div>
           <div class="feature-mock">
             <div class="app-window">
-              <div class="app-window-bar">
-                <span class="win-mark" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" width="16" height="16" fill="none">
-                    <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-                <span class="win-title">Purchasing · Invoice reconcile</span>
-              </div>
               <div class="app-window-body" data-mock="purchasing">
-                <div class="mk-inv-head">
-                  <div>
-                    <div class="mk-inv-supplier">Bidfood</div>
-                    <div class="mk-inv-ref">INV-20418 · matched to PO-1192</div>
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 32 32" width="15" height="15" fill="none" aria-hidden="true">
+                      <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Crosby<span class="ops">Ops</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab">Workforce</span>
+                    <span class="mk-nav-tab active">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">TC</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Purchasing / Orders</div>
+                  <h4 class="mk-title">Place an order <span class="muted">· Riverside Provisions</span></h4>
+                </div>
+
+                <div class="mk-order">
+                  <div class="mk-order-items">
+                    <div class="mk-oi-head"><span>Product</span><span>Qty</span><span>Line total</span></div>
+                    <div class="mk-oi-row">
+                      <span><div class="mk-oi-prod">Olive oil 4L</div><div class="mk-oi-sku">SKU 21926</div></span>
+                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">6</span><span class="mk-oi-step">+</span></span>
+                      <span class="mk-oi-total"><div class="lt">$214.80</div><div class="up">$35.80/ea</div></span>
+                    </div>
+                    <div class="mk-oi-row">
+                      <span><div class="mk-oi-prod">Plain flour 12.5kg</div><div class="mk-oi-sku">SKU 14127</div></span>
+                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">8</span><span class="mk-oi-step">+</span></span>
+                      <span class="mk-oi-total"><div class="lt">$176.00</div><div class="up">$22.00/ea</div></span>
+                    </div>
+                    <div class="mk-oi-row">
+                      <span><div class="mk-oi-prod">Tomatoes tinned</div><div class="mk-oi-sku">SKU 18510</div></span>
+                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">24</span><span class="mk-oi-step">+</span></span>
+                      <span class="mk-oi-total"><div class="lt">$92.40</div><div class="up">$3.85/ea</div></span>
+                    </div>
+                    <div class="mk-oi-row">
+                      <span><div class="mk-oi-prod">Butter unsalted 500g</div><div class="mk-oi-sku">SKU 14127</div></span>
+                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">10</span><span class="mk-oi-step">+</span></span>
+                      <span class="mk-oi-total"><div class="lt">$83.30</div><div class="up">$8.33/ea</div></span>
+                    </div>
                   </div>
-                  <span class="pill pill-green">✓ Matched</span>
-                </div>
-                <div class="mk-inv-lines">
-                  <div class="mk-inv-line"><span>Olive oil 4L × 6</span><span>$214.80</span></div>
-                  <div class="mk-inv-line"><span>Flour 12.5kg × 8</span><span>$176.00</span></div>
-                  <div class="mk-inv-line"><span>Tomatoes tin × 24</span><span>$92.40</span></div>
-                </div>
-                <div class="mk-inv-totals">
-                  <div class="mk-inv-trow"><span>Subtotal</span><span>$483.20</span></div>
-                  <div class="mk-inv-trow"><span>GST</span><span>$48.32</span></div>
-                  <div class="mk-inv-trow mk-inv-total"><span>Total</span><span>$531.52</span></div>
-                </div>
-                <div class="mk-foot">
-                  <span class="mk-foot-meta">No variance</span>
-                  <span class="mk-btn">Post to Xero</span>
+
+                  <div class="mk-summary">
+                    <div class="mk-summary-title">Summary</div>
+                    <div class="mk-sum-label">Delivery date</div>
+                    <div class="mk-sum-date">Wed, 8 Jul 2026</div>
+                    <div class="mk-sum-row"><span>Subtotal (ex GST)</span><span>$566.50</span></div>
+                    <div class="mk-sum-row"><span>GST</span><span>$56.65</span></div>
+                    <div class="mk-sum-row total"><span>Total</span><span>$623.15</span></div>
+                    <div class="mk-sum-btn">Send to supplier →</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -257,48 +375,209 @@
           </div>
           <div class="feature-mock">
             <div class="app-window">
-              <div class="app-window-bar">
-                <span class="win-mark" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" width="16" height="16" fill="none">
-                    <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-                <span class="win-title">Leave · Requests</span>
-              </div>
               <div class="app-window-body" data-mock="leave">
-                <div class="mk-rows">
-                  <div class="mk-row mk-row-col">
-                    <div class="mk-leave-top">
-                      <span class="mk-row-name">Maya R.</span>
-                      <span class="pill pill-amber">Pending</span>
-                    </div>
-                    <div class="mk-leave-meta">Annual · 14–18 Jul · 5 days · balance 62 hrs</div>
-                  </div>
-                  <div class="mk-row mk-row-col">
-                    <div class="mk-leave-top">
-                      <span class="mk-row-name">Jack T.</span>
-                      <span class="pill pill-green">Approved</span>
-                    </div>
-                    <div class="mk-leave-meta">Personal · 2 Jul · 1 day · balance 18 hrs</div>
-                  </div>
-                  <div class="mk-row mk-row-col">
-                    <div class="mk-leave-top">
-                      <span class="mk-row-name">Priya S.</span>
-                      <span class="pill pill-red">Declined</span>
-                    </div>
-                    <div class="mk-leave-meta">Annual · 30 Jun–4 Jul · clashes with cover</div>
-                  </div>
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 32 32" width="15" height="15" fill="none" aria-hidden="true">
+                      <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Crosby<span class="ops">Ops</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab active">Workforce</span>
+                    <span class="mk-nav-tab">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">TC</span>
+                  </span>
                 </div>
-                <div class="mk-foot">
-                  <span class="mk-foot-meta">1 awaiting approval</span>
-                  <span class="mk-btn">Review</span>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Workforce / Leave</div>
+                  <h4 class="mk-title">Leave <span class="muted">· July 2026</span></h4>
+                </div>
+
+                <div class="mk-tabs">
+                  <span class="mk-tab">Approvals</span>
+                  <span class="mk-tab active">Calendar</span>
+                  <span class="mk-tab">Balances</span>
+                </div>
+
+                <div class="mk-legend">
+                  <span class="mk-leg"><span class="mk-leg-dot annual"></span>Annual</span>
+                  <span class="mk-leg"><span class="mk-leg-dot personal"></span>Personal</span>
+                  <span class="mk-leg"><span class="mk-leg-dot unpaid"></span>Unpaid</span>
+                  <span class="mk-leg"><span class="mk-leg-dot pending"></span>Pending</span>
+                </div>
+
+                <div class="mk-cal">
+                  <div class="mk-cal-dow"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+                  <div class="mk-cal-grid">
+                    <div class="mk-cal-cell muted"><span class="mk-cal-day">30</span></div>
+                    <div class="mk-cal-cell today"><span class="mk-cal-day">1</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">2</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">3</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">4</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">5</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">6</span></div>
+
+                    <div class="mk-cal-cell"><span class="mk-cal-day">7</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">8</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">9</span><span class="mk-cal-pill annual">Eve · Annual</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">10</span><span class="mk-cal-pill annual">Eve · Annual</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">11</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">12</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">13</span></div>
+
+                    <div class="mk-cal-cell"><span class="mk-cal-day">14</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">15</span><span class="mk-cal-pill personal">Tom · Personal</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">16</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">17</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">18</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">19</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">20</span></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </article>
 
+        <!-- Award interpretation -->
+        <article class="feature-row">
+          <div class="feature-copy">
+            <div class="module-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+            </div>
+            <h3 class="module-title">Award interpretation</h3>
+            <p class="module-body">
+              Live award rates, classifications and penalty rules built in.
+              Weekend and evening loadings, overtime and allowances calculate
+              automatically as you roster and approve — no spreadsheets, no guesswork.
+            </p>
+          </div>
+          <div class="feature-mock">
+            <div class="app-window">
+              <div class="app-window-body" data-mock="award">
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 32 32" width="15" height="15" fill="none" aria-hidden="true">
+                      <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Crosby<span class="ops">Ops</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab active">Workforce</span>
+                    <span class="mk-nav-tab">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">TC</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Workforce / Timesheets</div>
+                  <h4 class="mk-title">Pay breakdown <span class="muted">· Week of 6 Jul</span></h4>
+                </div>
+
+                <div class="mk-pay">
+                  <div class="mk-pay-head">
+                    <div>
+                      <div class="mk-pay-emp">Eve A.</div>
+                      <div class="mk-pay-class">Food &amp; beverage attendant · Level 3</div>
+                    </div>
+                    <span class="mk-pay-award">MA000009</span>
+                  </div>
+                  <div class="mk-pay-rows">
+                    <div class="mk-pay-row">
+                      <div><div class="mk-pay-label">Ordinary hours</div><div class="mk-pay-sub">30.0h × $28.26</div></div>
+                      <div class="mk-pay-amt">$847.80</div>
+                    </div>
+                    <div class="mk-pay-row">
+                      <div><div class="mk-pay-label">Saturday penalty</div><div class="mk-pay-sub">8.0h × 125%</div></div>
+                      <div class="mk-pay-amt add">+$56.52</div>
+                    </div>
+                    <div class="mk-pay-row">
+                      <div><div class="mk-pay-label">Evening loading</div><div class="mk-pay-sub">6.0h × $2.92</div></div>
+                      <div class="mk-pay-amt add">+$17.52</div>
+                    </div>
+                    <div class="mk-pay-row">
+                      <div><div class="mk-pay-label">Overtime</div><div class="mk-pay-sub">2.0h × 150%</div></div>
+                      <div class="mk-pay-amt add">+$84.78</div>
+                    </div>
+                    <div class="mk-pay-row">
+                      <div><div class="mk-pay-label">Superannuation</div><div class="mk-pay-sub">11.5% guarantee</div></div>
+                      <div class="mk-pay-amt">$121.04</div>
+                    </div>
+                  </div>
+                  <div class="mk-pay-total">
+                    <span class="mk-pay-total-label">Gross + super this week</span>
+                    <span class="mk-pay-total-val">$1,127.66</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="integrations" class="integrations">
+      <div class="section-head">
+        <div class="eyebrow">Integrations</div>
+        <h2 class="section-title">Works with the tools you already use.</h2>
+      </div>
+      <div class="integ-grid">
+        <article class="integ-card">
+          <div class="integ-logo">
+            <svg viewBox="0 0 48 48" width="40" height="40" aria-label="Square" role="img">
+              <rect x="2" y="2" width="44" height="44" rx="11" fill="#0F1F3D"/>
+              <rect x="16" y="16" width="16" height="16" rx="4" fill="#fff"/>
+            </svg>
+          </div>
+          <h3 class="integ-name">Square</h3>
+          <p class="integ-body">
+            Daily sales sync straight from your POS — powering live wage-cost %
+            and revenue forecasts on every roster.
+          </p>
+        </article>
+
+        <article class="integ-card">
+          <div class="integ-logo">
+            <svg viewBox="0 0 48 48" width="40" height="40" aria-label="Xero" role="img">
+              <circle cx="24" cy="24" r="22" fill="#13B5EA"/>
+              <path d="M17 17l14 14M31 17L17 31" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="integ-name">Xero</h3>
+          <p class="integ-body">
+            Push approved timesheets to payroll and post supplier invoices as
+            bills — synced back with bill numbers, no double entry.
+          </p>
+        </article>
+
+        <article class="integ-card integ-soon">
+          <div class="integ-logo"><span class="integ-logo-soon">+</span></div>
+          <h3 class="integ-name">More coming soon</h3>
+          <p class="integ-body">
+            We are adding integrations all the time. Tell us the tools your
+            venue runs on and we will wire them in.
+          </p>
+        </article>
       </div>
     </section>
 
