@@ -574,6 +574,10 @@ a { color: inherit; text-decoration: none; }
 .integ-logo { height: 44px; display: flex; align-items: center; margin-bottom: 16px; }
 .integ-name { font-size: 18px; font-weight: 500; letter-spacing: -0.01em; margin: 0 0 8px; }
 .integ-body { font-size: 14px; line-height: 1.55; color: rgba(15, 31, 61, 0.72); margin: 0; }
+.integ-ico {
+  width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+  background: rgba(255, 107, 53, 0.10); color: var(--orange);
+}
 .integ-soon { border-style: dashed; background: transparent; box-shadow: none; }
 .integ-logo-soon {
   width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
