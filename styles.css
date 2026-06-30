@@ -333,7 +333,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--orange);
 }
 
-/* App-window frame — renders the real app page (off-white) */
+/* App-window frame: renders the real app page (off-white) */
 .app-window {
   background: var(--off-white);
   border: 1px solid var(--line-strong);
