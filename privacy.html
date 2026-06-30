@@ -86,38 +86,39 @@
       color: var(--warm-grey);
       font-size: 12px;
     }
-    .site-header {
-      max-width: 720px;
+    .nav {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 22px 24px;
+      padding: 22px 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 24px;
     }
     .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--navy); }
     .brand:hover { text-decoration: none; }
-    .brand-mark { display: inline-flex; }
+    .brand-mark { color: var(--orange); display: inline-flex; }
     .brand-text { font-size: 18px; font-weight: 500; letter-spacing: -0.015em; }
     .brand-text-ops { color: var(--orange); }
-    .header-links { display: flex; align-items: center; gap: 20px; }
-    .header-link { font-size: 14px; color: var(--navy); opacity: 0.7; }
-    .header-link:hover { opacity: 1; text-decoration: none; }
-    .header-cta {
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 14px; color: var(--navy); opacity: 0.7; transition: opacity 0.15s; }
+    .nav-link:hover { opacity: 1; text-decoration: none; }
+    .nav-cta {
       font-size: 14px;
       font-weight: 500;
       color: var(--navy);
-      padding: 9px 16px;
+      padding: 10px 18px;
       border-radius: 999px;
       border: 1px solid var(--line-strong);
       background: #fff;
+      transition: border-color 0.15s, transform 0.15s;
     }
-    .header-cta:hover { border-color: var(--navy); text-decoration: none; }
-    .site-footer { border-top: 1px solid var(--line); margin-top: 64px; }
+    .nav-cta:hover { border-color: var(--navy); transform: translateY(-1px); text-decoration: none; }
+    .site-footer { border-top: 1px solid var(--line); background: #fff; margin-top: 64px; }
     .footer-inner {
-      max-width: 720px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 28px 24px;
+      padding: 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -129,26 +130,30 @@
     .footer-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
     .footer-links a { color: var(--warm-grey); }
     .footer-links a:hover { color: var(--navy); text-decoration: none; }
-    @media (max-width: 560px) {
-      .header-link { display: none; }
+    @media (max-width: 760px) {
+      .nav { padding: 18px 20px; }
+      .nav-links { gap: 14px; }
+      .nav-link { display: none; }
+      .footer-inner { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
+  <header class="nav">
     <a class="brand" href="index.html">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+        <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
           <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </span>
       <span class="brand-text">Crosby<span class="brand-text-ops">Ops</span></span>
     </a>
-    <nav class="header-links">
-      <a class="header-link" href="index.html#what">What it does</a>
-      <a class="header-link" href="apply.html">Request access</a>
-      <a class="header-cta" href="https://app.crosbyops.com">Sign in</a>
+    <nav class="nav-links">
+      <a href="index.html#what" class="nav-link">What it does</a>
+      <a href="index.html#built-for" class="nav-link">Built for</a>
+      <a href="apply.html" class="nav-link">Request access</a>
+      <a href="https://app.crosbyops.com" class="nav-cta">Sign in</a>
     </nav>
   </header>
 
