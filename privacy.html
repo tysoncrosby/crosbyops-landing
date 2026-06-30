@@ -12,6 +12,8 @@
       --warm-grey: #8B7355;
       --off-white: #FAFAF7;
       --line: rgba(15, 31, 61, 0.08);
+      --line-strong: rgba(15, 31, 61, 0.14);
+      --gold: #FFC857;
     }
     * { box-sizing: border-box; }
     html, body {
@@ -84,9 +86,72 @@
       color: var(--warm-grey);
       font-size: 12px;
     }
+    .site-header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--navy); }
+    .brand:hover { text-decoration: none; }
+    .brand-mark { display: inline-flex; }
+    .brand-text { font-size: 18px; font-weight: 500; letter-spacing: -0.015em; }
+    .brand-text-ops { color: var(--orange); }
+    .header-links { display: flex; align-items: center; gap: 20px; }
+    .header-link { font-size: 14px; color: var(--navy); opacity: 0.7; }
+    .header-link:hover { opacity: 1; text-decoration: none; }
+    .header-cta {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: #fff;
+    }
+    .header-cta:hover { border-color: var(--navy); text-decoration: none; }
+    .site-footer { border-top: 1px solid var(--line); margin-top: 64px; }
+    .footer-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--warm-grey);
+    }
+    .footer-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .footer-links a { color: var(--warm-grey); }
+    .footer-links a:hover { color: var(--navy); text-decoration: none; }
+    @media (max-width: 560px) {
+      .header-link { display: none; }
+    }
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+          <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">Crosby<span class="brand-text-ops">Ops</span></span>
+    </a>
+    <nav class="header-links">
+      <a class="header-link" href="index.html#what">What it does</a>
+      <a class="header-link" href="apply.html">Request access</a>
+      <a class="header-cta" href="https://app.crosbyops.com">Sign in</a>
+    </nav>
+  </header>
+
   <main class="wrap">
     <div class="eyebrow">Crosby Ops</div>
     <h1>Privacy Policy</h1>
@@ -243,5 +308,18 @@
       This policy is hosted at <a href="https://crosbyops.com/privacy">crosbyops.com/privacy</a>. The Crosby Ops application is operated under the Australian Privacy Principles.
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Crosby Ops</span>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="https://app.crosbyops.com">Sign in</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
