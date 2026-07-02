@@ -172,7 +172,7 @@ a { color: inherit; text-decoration: none; }
     radial-gradient(circle at 88% -20%, rgba(255, 200, 87, 0.55), transparent 55%),
     var(--orange);
   border: 0;
-  border-radius: 12px;
+  border-radius: 999px;
   cursor: pointer;
   box-shadow: 0 1px 2px rgba(15, 31, 61, 0.10);
   transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
@@ -194,7 +194,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--white);
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 12px;
+  border-radius: 999px;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s;
 }
@@ -604,7 +604,7 @@ a { color: inherit; text-decoration: none; }
 .mk-sum-date { font-size: 12px; font-weight: 500; color: var(--navy); padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 12px; }
 .mk-sum-row { display: flex; justify-content: space-between; font-size: 11px; color: var(--warm-grey); margin-bottom: 6px; font-feature-settings: 'tnum'; }
 .mk-sum-row.total { font-size: 13px; font-weight: 600; color: var(--navy); padding-top: 8px; border-top: 1px solid var(--line); margin-top: 4px; }
-.mk-sum-btn { display: flex; align-items: center; justify-content: center; gap: 5px; height: 34px; margin-top: 12px; border-radius: 10px; font-size: 12px; font-weight: 500; color: #fff; background: radial-gradient(circle at 88% -20%, rgba(255, 200, 87, 0.5), transparent 55%), var(--navy); box-shadow: 0 4px 12px -2px rgba(15, 31, 61, 0.25); }
+.mk-sum-btn { display: flex; align-items: center; justify-content: center; gap: 5px; height: 34px; margin-top: 12px; border-radius: 999px; font-size: 12px; font-weight: 500; color: #fff; background: radial-gradient(circle at 88% -20%, rgba(255, 200, 87, 0.5), transparent 55%), var(--navy); box-shadow: 0 4px 12px -2px rgba(15, 31, 61, 0.25); }
 
 /* Leave legend + month calendar */
 .mk-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
@@ -775,7 +775,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--navy);
   background: var(--off-white);
   border: 1px solid var(--line-strong);
-  border-radius: 10px;
+  border-radius: 999px;
   outline: none;
   transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
   appearance: none;
