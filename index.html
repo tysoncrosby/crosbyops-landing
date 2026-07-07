@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
   <header class="nav">
@@ -630,6 +630,71 @@
           </div>
         </article>
 
+        <!-- Recipe costing -->
+        <article class="feature-row reverse">
+          <div class="feature-copy">
+            <div class="module-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 2v7c0 1.1 .9 2 2 2h4a2 2 0 0 0 2-2V2" /><path d="M7 2v20" /><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1 .9 2 2 2h3Zm0 0v7" />
+              </svg>
+            </div>
+            <h3 class="module-title">Recipe costing</h3>
+            <p class="module-body">
+              Cost every dish from live supplier prices. Set a target GP and see
+              cost per serve, sell price and margin update the moment an
+              ingredient price moves, with an alert when a recipe drops under target.
+            </p>
+          </div>
+          <div class="feature-mock">
+            <div class="app-window">
+              <div class="app-window-body" data-mock="recipe">
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 32 32" width="15" height="15" fill="none" aria-hidden="true">
+                      <path d="M3 26 L13 8 L18 17" stroke="#FFC857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11 26 L21 8 L29 26" stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Crosby<span class="ops">Ops</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab">Workforce</span>
+                    <span class="mk-nav-tab active">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">AM</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Purchasing / Recipes</div>
+                  <h4 class="mk-title">Beef ragù pappardelle <span class="muted">· on target</span></h4>
+                </div>
+
+                <div class="mk-rc-tiles">
+                  <div class="mk-rc-tile"><div class="mk-rc-label">Cost / serve</div><div class="mk-rc-value">$6.80</div><div class="mk-rc-sub">Food cost 26.2%</div></div>
+                  <div class="mk-rc-tile"><div class="mk-rc-label">Sell price</div><div class="mk-rc-value">$26.00</div><div class="mk-rc-sub">ex GST</div></div>
+                  <div class="mk-rc-tile"><div class="mk-rc-label">Gross profit</div><div class="mk-rc-value good">73.8%</div><div class="mk-rc-sub">Target 70%</div></div>
+                </div>
+
+                <div class="mk-rc-ings">
+                  <div class="mk-rc-ings-head"><span>Ingredients</span><span>Makes 6 serves</span></div>
+                  <div class="mk-rc-row"><span class="mk-rc-ing-name">Beef chuck</span><span class="mk-rc-ing-qty">1.2 kg</span><span class="mk-rc-ing-cost">$16.80</span></div>
+                  <div class="mk-rc-row"><span class="mk-rc-ing-name">Pappardelle</span><span class="mk-rc-ing-qty">600 g</span><span class="mk-rc-ing-cost">$5.40</span></div>
+                  <div class="mk-rc-row"><span class="mk-rc-ing-name">Parmesan</span><span class="mk-rc-ing-qty">150 g</span><span class="mk-rc-ing-cost">$8.85</span></div>
+                  <div class="mk-rc-row"><span class="mk-rc-ing-name">Tomatoes tinned</span><span class="mk-rc-ing-qty">× 3</span><span class="mk-rc-ing-cost">$3.15</span></div>
+                  <div class="mk-rc-row"><span class="mk-rc-ing-name">Soffritto</span><span class="mk-rc-ing-qty">400 g</span><span class="mk-rc-ing-cost">$2.40</span></div>
+                  <div class="mk-rc-row"><span class="mk-rc-ing-name">Red wine</span><span class="mk-rc-ing-qty">250 ml</span><span class="mk-rc-ing-cost">$4.20</span></div>
+                  <div class="mk-rc-foot"><span class="mk-rc-foot-label">Batch cost</span><span class="mk-rc-foot-val">$40.80 · $6.80/serve</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -702,11 +767,11 @@
         <article class="more-card">
           <div class="more-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 2v7c0 1.1 .9 2 2 2h4a2 2 0 0 0 2-2V2" /><path d="M7 2v20" /><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1 .9 2 2 2h3Zm0 0v7" />
+              <path d="M4 2v20l3-2 3 2 3-2 3 2 3-2 3 2V2l-3 2-3-2-3 2-3-2-3 2-3-2z" /><path d="M8 9h8M8 13h8M8 17h5" />
             </svg>
           </div>
-          <h3 class="more-title">Recipe costing</h3>
-          <p class="more-body">Cost dishes by ingredient, with live margins and menu profitability.</p>
+          <h3 class="more-title">Bookkeeping &amp; accounting</h3>
+          <p class="more-body">Export supplier invoices to your accounting software, map accounts in batch, and generate bank payment files. Less bookkeeping time and cost.</p>
         </article>
 
         <article class="more-card">
