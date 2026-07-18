@@ -935,6 +935,38 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear()
+
+    // Scale the desktop hero mockup down to fit narrow screens, so mobile
+    // shows the same layout as desktop rather than a reflowed version.
+    ;(function () {
+      var wrap = document.querySelector('.hero-visual')
+      var mock = wrap && wrap.querySelector('.dash-win')
+      if (!mock) return
+      function fit() {
+        // Above the single-column breakpoint the CSS handles layout/rotation.
+        if (window.innerWidth > 960) {
+          mock.style.transform = ''
+          mock.style.transformOrigin = ''
+          wrap.style.height = ''
+          return
+        }
+        mock.style.transform = ''
+        mock.style.transformOrigin = ''
+        wrap.style.height = ''
+        var naturalW = mock.offsetWidth
+        var naturalH = mock.offsetHeight
+        var scale = Math.min(1, wrap.clientWidth / naturalW)
+        if (scale < 0.999) {
+          mock.style.transformOrigin = 'top left'
+          mock.style.transform = 'scale(' + scale + ')'
+          wrap.style.height = Math.ceil(naturalH * scale) + 'px'
+        }
+      }
+      fit()
+      window.addEventListener('resize', fit)
+      window.addEventListener('load', fit)
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit)
+    })()
   </script>
 </body>
 </html>
