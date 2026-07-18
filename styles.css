@@ -954,10 +954,8 @@ select.form-input {
   .feature-row.reverse .feature-copy { order: 1; }
   .feature-row.reverse .feature-mock { order: 2; }
   .feature-copy { max-width: none; }
-  .app-window-body { padding: 12px; }
-  .mk-nav-tabs { display: none; }
-  .mk-nav-loc { display: none; }
-  .mk-order { grid-template-columns: 1fr; }
+  .feature-mock { overflow: hidden; }
+  .app-window { width: 654px; }
   .integrations { padding: 0 16px; margin-bottom: 64px; }
   .integ-grid { grid-template-columns: 1fr; }
   .more { padding: 0 16px; margin-bottom: 64px; }
