@@ -971,7 +971,9 @@ select.form-input {
 .store-badges { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; align-items: center; }
 .store-badge { display: inline-flex; line-height: 0; transition: transform 0.15s ease, opacity 0.15s ease; }
 .store-badge img { display: block; width: auto; }
-.store-badge.app-store img { height: 46px; }
-.store-badge.google-play img { height: 60px; }   /* PNG has built-in clear space, so render taller to match */
+/* App Store badge is edge-to-edge; Google Play has ~16% clear space each side.
+   Render Google ~1.49x taller so the visible badges match and sit level. */
+.store-badge.app-store img { height: 40px; }
+.store-badge.google-play img { height: 60px; }
 .store-badge:hover { transform: translateY(-2px); opacity: 0.9; }
 .contact .store-badges { justify-content: center; }
