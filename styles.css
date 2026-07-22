@@ -967,9 +967,11 @@ select.form-input {
   .form-row.two-col { grid-template-columns: 1fr; }
 }
 
-/* App store badges */
-.store-badges { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
-.store-badge { display: inline-flex; line-height: 0; border-radius: 9px; transition: transform 0.15s ease, box-shadow 0.15s ease; }
-.store-badge svg { height: 46px; width: auto; display: block; }
-.store-badge:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); }
+/* App store badges (official artwork) */
+.store-badges { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; align-items: center; }
+.store-badge { display: inline-flex; line-height: 0; transition: transform 0.15s ease, opacity 0.15s ease; }
+.store-badge img { display: block; width: auto; }
+.store-badge.app-store img { height: 46px; }
+.store-badge.google-play img { height: 60px; }   /* PNG has built-in clear space, so render taller to match */
+.store-badge:hover { transform: translateY(-2px); opacity: 0.9; }
 .contact .store-badges { justify-content: center; }
