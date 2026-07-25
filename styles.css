@@ -941,8 +941,8 @@ select.form-input {
 /* ── Footer ────────────────────────────────────────────────────── */
 
 .footer {
-  border-top: 1px solid var(--line);
-  background: var(--white);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: var(--white);
 }
 
 .footer-inner {
@@ -960,6 +960,10 @@ select.form-input {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.01em;
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer-meta {
@@ -967,10 +971,10 @@ select.form-input {
   align-items: center;
   gap: 24px;
   font-size: 13px;
-  color: var(--warm-grey);
+  color: rgba(255, 255, 255, 0.55);
 }
-.footer-meta a { color: var(--warm-grey); transition: color 0.15s; }
-.footer-meta a:hover { color: var(--navy); }
+.footer-meta a { color: rgba(255, 255, 255, 0.55); transition: color 0.15s; }
+.footer-meta a:hover { color: var(--white); }
 
 /* ── Responsive ────────────────────────────────────────────────── */
 
