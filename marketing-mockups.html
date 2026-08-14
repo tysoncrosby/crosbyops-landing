@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CrosCheq · product mockups</title>
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+  --navy:        #0F1F3D;
+  --navy-2:      #1A2D52;
+  --orange:      #FF6B35;
+  --orange-soft: #FF8A5C;
+  --gold:        #FFC857;
+  --white:       #FFFFFF;
+  --off-white:   #FAFAF7;
+  --surface-2:   #F4F3EC;
+  --warm-grey:   #8B7355;
+  --green:       #4A8A5E;
+  --green-soft:  rgba(74, 138, 94, 0.12);
+  --red:         #C0392B;
+  --red-soft:    rgba(192, 57, 43, 0.10);
+  --gold-soft:   rgba(255, 200, 87, 0.16);
+  --orange-tint: rgba(255, 107, 53, 0.12);
+  --navy-tint:   rgba(15, 31, 61, 0.06);
+  --line:        rgba(15, 31, 61, 0.08);
+  --line-strong: rgba(15, 31, 61, 0.14);
+  --shadow-sm:   0 1px 2px rgba(15,31,61,.04), 0 4px 12px -4px rgba(15,31,61,.08);
+  --shadow-md:   0 2px 4px rgba(15,31,61,.06), 0 12px 32px -8px rgba(15,31,61,.14);
+}
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 56px 24px 80px;
+      background: #f1f0ea;
+      color: var(--navy);
+      font-family: 'General Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-feature-settings: 'ss01', 'cv11', 'tnum';
+      -webkit-font-smoothing: antialiased;
+    }
+    .page-head { max-width: 880px; margin: 0 auto 56px; text-align: center; }
+    .page-head .eyebrow {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--warm-grey); margin-bottom: 12px;
+    }
+    .page-head h1 { font-size: 34px; font-weight: 500; letter-spacing: -0.025em; margin: 0 0 12px; }
+    .page-head p { font-size: 15px; color: rgba(15,31,61,0.7); margin: 0; }
+    .wrap { max-width: 880px; margin: 0 auto; display: grid; gap: 56px; }
+    .shot-label { margin-bottom: 16px; }
+    .shot-label h2 { font-size: 22px; font-weight: 500; letter-spacing: -0.02em; margin: 0 0 4px; }
+    .shot-label p { font-size: 14px; color: rgba(15,31,61,0.7); margin: 0; }
+    .shot .app-window { width: 100%; }
+
+    /* Mockup styles (extracted from the live site) */
+    /* App-window frame: renders the real app page (off-white) */
+.app-window {
+  background: var(--off-white);
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.app-window-body { padding: 14px; }
+
+/* App nav pill (.v3-chrome) */
+.mk-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--navy);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  padding: 6px 8px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 8px 20px -8px rgba(15, 31, 61, 0.35);
+}
+.mk-nav-brand {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 500; color: #fff; letter-spacing: -0.01em;
+  padding: 0 6px; white-space: nowrap;
+}
+.cheq { background: linear-gradient(120deg, var(--orange), var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.mk-nav-tabs { display: flex; align-items: center; gap: 2px; min-width: 0; overflow: hidden; }
+.mk-nav-tab {
+  padding: 5px 10px; border-radius: 999px; font-size: 11px; font-weight: 500;
+  color: rgba(255, 255, 255, 0.65); white-space: nowrap;
+}
+.mk-nav-tab.active {
+  background: var(--orange); color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 4px 12px -2px rgba(255, 107, 53, 0.4);
+}
+.mk-nav-right { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+.mk-nav-loc {
+  display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 10px;
+  background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 999px; font-size: 11px; color: #fff; white-space: nowrap;
+}
+.mk-nav-ava {
+  width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+  display: grid; place-items: center; font-size: 10px; font-weight: 600; color: #fff;
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+}
+.mk-nav-ava.green { background: linear-gradient(135deg, #6AB48A, #4A8A5E); }
+
+/* Breadcrumb + title */
+.mk-head { padding: 14px 4px 4px; }
+.mk-crumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 9px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--warm-grey); margin-bottom: 6px;
+}
+.mk-tag {
+  font-size: 8px; letter-spacing: 0.08em; padding: 2px 7px; border-radius: 999px;
+  background: var(--gold-soft); color: #8a6a00;
+}
+.mk-title { font-size: 17px; font-weight: 500; letter-spacing: -0.02em; color: var(--navy); margin: 0; }
+.mk-title .muted { color: var(--warm-grey); font-weight: 400; }
+
+/* Dark stats banner (.v3-rd-hero) */
+.mk-banner {
+  position: relative; overflow: hidden;
+  border-radius: 14px; padding: 14px 16px; color: #fff; margin-top: 12px;
+  background:
+    radial-gradient(circle at 110% -10%, rgba(255, 107, 53, 0.32), transparent 42%),
+    radial-gradient(circle at -10% 120%, rgba(255, 200, 87, 0.22), transparent 42%),
+    linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+  box-shadow: 0 12px 28px -10px rgba(15, 31, 61, 0.35);
+}
+.mk-banner-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(108px, 1fr)); gap: 16px;
+}
+.mk-metric { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.mk-metric-label {
+  display: flex; align-items: center; justify-content: space-between; gap: 6px;
+  font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+.mk-metric-dot { width: 6px; height: 6px; border-radius: 50%; background: #6cd28e; box-shadow: 0 0 0 3px rgba(108, 210, 142, 0.18); }
+.mk-metric-dot.warn { background: var(--gold); box-shadow: 0 0 0 3px rgba(255, 200, 87, 0.2); }
+.mk-metric-dot.bad { background: #ef6868; box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.22); }
+.mk-metric-value { font-size: 20px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.1; font-feature-settings: 'tnum'; }
+.mk-metric-value .pct { font-size: 13px; color: rgba(255, 255, 255, 0.45); font-weight: 400; }
+.mk-metric-sub { font-size: 10px; color: rgba(255, 255, 255, 0.5); line-height: 1.3; }
+.mk-metric-sub strong { color: rgba(255, 255, 255, 0.78); font-weight: 500; }
+.mk-bar-wrap { position: relative; margin-top: 6px; }
+.mk-bar { height: 5px; background: rgba(255, 255, 255, 0.06); border-radius: 3px; display: flex; overflow: hidden; }
+.mk-bar-zone { height: 100%; }
+.mk-bar-zone.green { background: rgba(108, 210, 142, 0.5); }
+.mk-bar-zone.amber { background: rgba(255, 200, 87, 0.5); }
+.mk-bar-zone.red { background: rgba(192, 57, 43, 0.5); }
+.mk-bar-marker { position: absolute; top: -3px; width: 3px; height: 11px; background: #fff; border-radius: 1.5px; box-shadow: 0 0 0 1px rgba(15, 31, 61, 0.3); }
+
+/* White content card under banner */
+.mk-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-sm); overflow: hidden; margin-top: 12px; }
+
+/* Roster grid */
+.mk-rg-head, .mk-rg-row { display: grid; grid-template-columns: 84px repeat(5, 1fr); }
+.mk-rg-head { border-bottom: 1px solid var(--line); }
+.mk-rg-hcell { padding: 8px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
+.mk-rg-hcell:last-child { border-right: 0; }
+.mk-rg-dayname { font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm-grey); font-weight: 500; }
+.mk-rg-daycost { font-size: 10px; font-weight: 500; font-feature-settings: 'tnum'; }
+.mk-rg-daycost.safe { color: #4a8a5e; }
+.mk-rg-daycost.warn { color: #b8761f; }
+.mk-rg-daycost.over { color: #c0392b; }
+.mk-rg-section { padding: 6px 10px; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-grey); background: var(--surface-2); font-weight: 500; }
+.mk-rg-row { border-bottom: 1px solid rgba(15, 31, 61, 0.06); }
+.mk-rg-row:last-child { border-bottom: 0; }
+.mk-rg-staff { padding: 8px 10px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; }
+.mk-rg-staff-name { font-size: 11px; font-weight: 500; color: var(--navy); letter-spacing: -0.01em; }
+.mk-rg-staff-sub { font-size: 9px; color: var(--warm-grey); font-feature-settings: 'tnum'; }
+.mk-rg-cell { padding: 5px; border-right: 1px solid var(--line); display: flex; }
+.mk-rg-cell:last-child { border-right: 0; }
+.mk-rg-shift {
+  flex: 1; border-radius: 8px; padding: 5px 7px;
+  background: linear-gradient(135deg, rgba(15, 31, 61, 0.04), rgba(15, 31, 61, 0.02));
+  border: 1px solid rgba(15, 31, 61, 0.1);
+  box-shadow: inset 3px 0 0 var(--sh, var(--orange));
+  display: flex; flex-direction: column; gap: 1px;
+}
+.mk-rg-shift .t { font-size: 10px; font-weight: 500; color: var(--navy); letter-spacing: -0.01em; line-height: 1.15; font-feature-settings: 'tnum'; }
+.mk-rg-shift .b { font-size: 8px; color: var(--warm-grey); }
+.mk-rg-shift .c { font-size: 9px; font-weight: 500; color: var(--navy); margin-top: 1px; text-align: right; font-feature-settings: 'tnum'; }
+.mk-rg-off { flex: 1; border-radius: 8px; border: 1px dashed rgba(15, 31, 61, 0.1); display: grid; place-items: center; font-size: 9px; color: var(--warm-grey); min-height: 44px; }
+.mk-rg-leave { flex: 1; border-radius: 8px; border: 1px solid rgba(255, 200, 87, 0.4); background: rgba(255, 200, 87, 0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 44px; }
+.mk-rg-leave .lt { font-size: 9px; font-weight: 500; color: #8a5a1f; }
+.mk-rg-leave .lm { font-size: 7px; letter-spacing: 0.08em; text-transform: uppercase; color: #b8761f; font-weight: 500; }
+
+/* Tab group (timesheets + leave) */
+.mk-tabs { display: inline-flex; gap: 3px; background: rgba(15, 31, 61, 0.04); border-radius: 999px; padding: 3px; margin: 12px 0; }
+.mk-tab { padding: 5px 12px; font-size: 11px; font-weight: 500; color: var(--warm-grey); border-radius: 999px; }
+.mk-tab.active { background: var(--navy); color: #fff; }
+.mk-tab .n { opacity: 0.55; margin-left: 4px; }
+
+/* Timesheet rows */
+.mk-ts { display: grid; gap: 8px; }
+.mk-ts-row { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.mk-ava { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-size: 10px; font-weight: 700; color: #fff; flex-shrink: 0; background: linear-gradient(135deg, var(--gold), var(--orange)); }
+.mk-ava.green { background: linear-gradient(135deg, #6AB48A, #4A8A5E); }
+.mk-ts-info { flex: 1; min-width: 0; }
+.mk-ts-name { font-size: 13px; font-weight: 600; color: var(--navy); letter-spacing: -0.015em; }
+.mk-ts-meta { font-size: 11px; color: var(--warm-grey); }
+.mk-pill-pending { background: #fffbeb; color: #b45309; font-size: 9px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+.mk-pill-approved { background: var(--green-soft); color: var(--green); font-size: 9px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+.mk-btn-navy {
+  display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 12px;
+  border-radius: 999px; font-size: 11px; font-weight: 500; color: #fff; white-space: nowrap;
+  background: radial-gradient(circle at 88% -20%, rgba(255, 200, 87, 0.5), transparent 55%), var(--navy);
+  box-shadow: 0 4px 12px -2px rgba(15, 31, 61, 0.25);
+}
+
+/* Purchasing order layout */
+.mk-order { display: grid; grid-template-columns: 1.5fr 1fr; gap: 12px; margin-top: 12px; align-items: start; }
+.mk-order-items { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.mk-oi-head, .mk-oi-row { display: grid; grid-template-columns: 1fr 56px 64px; gap: 8px; align-items: center; }
+.mk-oi-head { padding: 8px 12px; border-bottom: 1px solid var(--line); font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-grey); }
+.mk-oi-head span:nth-child(2), .mk-oi-head span:nth-child(3) { text-align: right; }
+.mk-oi-row { padding: 9px 12px; border-bottom: 1px solid rgba(15, 31, 61, 0.05); }
+.mk-oi-row:last-child { border-bottom: 0; }
+.mk-oi-prod { font-size: 11px; font-weight: 500; color: var(--navy); }
+.mk-oi-sku { font-size: 8px; color: var(--warm-grey); font-feature-settings: 'tnum'; }
+.mk-oi-stepper { display: inline-flex; align-items: center; gap: 5px; justify-content: flex-end; }
+.mk-oi-step { width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--line-strong); display: grid; place-items: center; font-size: 11px; color: var(--warm-grey); }
+.mk-oi-qty { font-size: 11px; font-weight: 500; min-width: 12px; text-align: center; font-feature-settings: 'tnum'; }
+.mk-oi-total { text-align: right; }
+.mk-oi-total .lt { font-size: 11px; font-weight: 600; color: var(--orange); font-feature-settings: 'tnum'; }
+.mk-oi-total .up { font-size: 8px; color: var(--warm-grey); font-feature-settings: 'tnum'; }
+
+.mk-summary { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+.mk-summary-title { font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+.mk-sum-label { font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-grey); margin-bottom: 4px; }
+.mk-sum-date { font-size: 12px; font-weight: 500; color: var(--navy); padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 12px; }
+.mk-sum-row { display: flex; justify-content: space-between; font-size: 11px; color: var(--warm-grey); margin-bottom: 6px; font-feature-settings: 'tnum'; }
+.mk-sum-row.total { font-size: 13px; font-weight: 600; color: var(--navy); padding-top: 8px; border-top: 1px solid var(--line); margin-top: 4px; }
+.mk-sum-btn { display: flex; align-items: center; justify-content: center; gap: 5px; height: 34px; margin-top: 12px; border-radius: 10px; font-size: 12px; font-weight: 500; color: #fff; background: radial-gradient(circle at 88% -20%, rgba(255, 200, 87, 0.5), transparent 55%), var(--navy); box-shadow: 0 4px 12px -2px rgba(15, 31, 61, 0.25); }
+
+/* Leave legend + month calendar */
+.mk-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
+.mk-leg { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; color: var(--warm-grey); }
+.mk-leg-dot { width: 8px; height: 8px; border-radius: 50%; }
+.mk-leg-dot.annual { background: var(--gold); }
+.mk-leg-dot.personal { background: #6c5ce7; }
+.mk-leg-dot.unpaid { background: var(--warm-grey); }
+.mk-leg-dot.pending { background: repeating-linear-gradient(45deg, var(--gold) 0 3px, rgba(255, 200, 87, 0.4) 3px 6px); }
+
+.mk-cal { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.mk-cal-dow { display: grid; grid-template-columns: repeat(7, 1fr); border-bottom: 1px solid var(--line); }
+.mk-cal-dow span { padding: 6px 8px; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-grey); font-weight: 500; }
+.mk-cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); }
+.mk-cal-cell { min-height: 50px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 5px 6px; display: flex; flex-direction: column; gap: 3px; }
+.mk-cal-cell:nth-child(7n) { border-right: 0; }
+.mk-cal-day { font-size: 11px; font-weight: 500; color: var(--navy); font-feature-settings: 'tnum'; }
+.mk-cal-cell.muted .mk-cal-day { color: rgba(15, 31, 61, 0.3); }
+.mk-cal-cell.weekend { background: rgba(255, 200, 87, 0.04); }
+.mk-cal-cell.today { background: rgba(255, 107, 53, 0.05); box-shadow: inset 0 0 0 2px rgba(255, 107, 53, 0.18); }
+.mk-cal-cell.today .mk-cal-day { color: var(--orange); }
+.mk-cal-pill { font-size: 8px; font-weight: 500; padding: 2px 5px; border-radius: 999px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mk-cal-pill.annual { background: rgba(255, 200, 87, 0.16); border: 1px solid rgba(255, 200, 87, 0.4); color: #6c5418; }
+.mk-cal-pill.personal { background: rgba(108, 92, 231, 0.12); border: 1px solid rgba(108, 92, 231, 0.28); color: #4a3eb5; }
+
+/* Award pay-rates mockup */
+.mk-pr-sub { font-size: 10px; color: var(--warm-grey); margin: 2px 0 0; }
+.mk-pr { background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-sm); overflow: hidden; margin-top: 12px; }
+.mk-pr-head, .mk-pr-row { display: grid; grid-template-columns: 1.8fr 0.7fr 0.8fr 1.4fr; gap: 8px; align-items: center; }
+.mk-pr-head { padding: 8px 12px; border-bottom: 1px solid var(--line); background: var(--surface-2); font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-grey); }
+.mk-pr-head span:nth-child(2), .mk-pr-head span:nth-child(3) { text-align: right; }
+.mk-pr-row { padding: 8px 12px; border-bottom: 1px solid rgba(15, 31, 61, 0.05); }
+.mk-pr-row:last-child { border-bottom: 0; }
+.mk-pr-row.base { background: rgba(15, 31, 61, 0.025); }
+.mk-pr-type { font-size: 10px; font-weight: 500; color: var(--navy); line-height: 1.2; }
+.mk-pr-mult { font-size: 10px; color: var(--warm-grey); text-align: right; font-feature-settings: 'tnum'; }
+.mk-pr-rate { font-size: 11px; font-weight: 600; color: var(--navy); text-align: right; font-feature-settings: 'tnum'; }
+.mk-pr-eff { font-size: 9px; color: var(--warm-grey); line-height: 1.2; }
+
+
+
+    /* Integrations strip */
+    .integrations-block { max-width: 880px; margin: 64px auto 0; }
+    /* ── Integrations ──────────────────────────────────────────────── */
+
+.integrations {
+  max-width: 1200px;
+  margin: 0 auto 96px;
+  padding: 0 32px;
+}
+.integ-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.integ-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+.integ-logo { height: 44px; display: flex; align-items: center; margin-bottom: 16px; }
+.integ-name { font-size: 18px; font-weight: 500; letter-spacing: -0.01em; margin: 0 0 8px; }
+.integ-body { font-size: 14px; line-height: 1.55; color: rgba(15, 31, 61, 0.72); margin: 0; }
+.integ-ico {
+  width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+  background: rgba(255, 107, 53, 0.10); color: var(--orange);
+}
+.integ-soon { border-style: dashed; background: transparent; box-shadow: none; }
+.integ-logo-soon {
+  width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+  background: var(--surface-2); color: var(--warm-grey); font-size: 26px; font-weight: 300; line-height: 1;
+}
+
+
+
+    @media (max-width: 760px) {
+      body { padding: 32px 14px 56px; }
+      .mk-nav-tabs { display: none; }
+      .mk-nav-loc { display: none; }
+      .mk-order { grid-template-columns: 1fr; }
+      .integ-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-head">
+    <div class="eyebrow">CrosCheq · product mockups</div>
+    <h1>What the app looks like</h1>
+    <p>Representative screens with realistic (fictional) data. For marketing use.</p>
+  </div>
+
+  <div class="wrap">
+      <section class="shot">
+        <div class="shot-label">
+          <h2>Rostering</h2>
+          <p>Drag shifts, copy weeks, live award-correct wage cost as you build.</p>
+        </div>
+        <div class="app-window">
+              <div class="app-window-body" data-mock="rostering">
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true">
+                      <defs><linearGradient id="tick-g20" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
+                      <path d="M26 55 L38 67 L70 33" stroke="url(#tick-g20)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
+                    </svg>
+                    CROS<span class="cheq">CHEQ</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab active">Workforce</span>
+                    <span class="mk-nav-tab">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">AM</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Workforce / Rosters <span class="mk-tag">DRAFT</span></div>
+                  <h4 class="mk-title">Roster <span class="muted">· 6–12 Jul 2026</span></h4>
+                </div>
+
+                <div class="mk-banner">
+                  <div class="mk-banner-grid">
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Total wage cost</div>
+                      <div class="mk-metric-value">$11,540</div>
+                      <div class="mk-metric-sub"><strong>280</strong> of 257 hrs</div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Gross revenue</div>
+                      <div class="mk-metric-value">$33,260</div>
+                      <div class="mk-metric-sub">Forecast from Turnover</div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Wage cost % <span class="mk-metric-dot bad"></span></div>
+                      <div class="mk-metric-value">38.2<span class="pct">%</span></div>
+                      <div class="mk-bar-wrap">
+                        <div class="mk-bar">
+                          <span class="mk-bar-zone green" style="width:52%"></span>
+                          <span class="mk-bar-zone amber" style="width:24%"></span>
+                          <span class="mk-bar-zone red" style="width:24%"></span>
+                        </div>
+                        <span class="mk-bar-marker" style="left:79%"></span>
+                      </div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Sales / labour hr</div>
+                      <div class="mk-metric-value">$108</div>
+                      <div class="mk-metric-sub">Target <strong>$118/h</strong></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mk-card">
+                  <div class="mk-rg-head">
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Staff</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Mon 6</span><span class="mk-rg-daycost over">41.9%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Tue 7</span><span class="mk-rg-daycost safe">33.2%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Wed 8</span><span class="mk-rg-daycost warn">38.0%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Thu 9</span><span class="mk-rg-daycost safe">30.0%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Fri 10</span><span class="mk-rg-daycost safe">28.3%</span></div>
+                  </div>
+
+                  <div class="mk-rg-section">Front of House</div>
+
+                  <div class="mk-rg-row">
+                    <div class="mk-rg-staff"><span class="mk-rg-staff-name">Olivia P.</span><span class="mk-rg-staff-sub">Full time · 38h</span></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FF6B35"><span class="t">7am–3pm</span><span class="b">30 min break</span><span class="c">$298</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FF6B35"><span class="t">7am–3pm</span><span class="b">30 min break</span><span class="c">$298</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FF6B35"><span class="t">9am–5pm</span><span class="b">30 min break</span><span class="c">$176</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-leave"><span class="lt">Annual leave</span><span class="lm">All day</span></div></div>
+                  </div>
+
+                  <div class="mk-rg-row">
+                    <div class="mk-rg-staff"><span class="mk-rg-staff-name">Noah K.</span><span class="mk-rg-staff-sub">Casual · 24h</span></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FFC857"><span class="t">3pm–11pm</span><span class="b">30 min break</span><span class="c">$124</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FFC857"><span class="t">3pm–11pm</span><span class="b">30 min break</span><span class="c">$176</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FFC857"><span class="t">3pm–11pm</span><span class="b">30 min break</span><span class="c">$201</span></div></div>
+                  </div>
+
+                  <div class="mk-rg-row">
+                    <div class="mk-rg-staff"><span class="mk-rg-staff-name">Sam T.</span><span class="mk-rg-staff-sub">Casual · 18h</span></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#1A2D52"><span class="t">5pm–9pm</span><span class="c">$118</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#1A2D52"><span class="t">5pm–9pm</span><span class="c">$118</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#1A2D52"><span class="t">5pm–9pm</span><span class="c">$118</span></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+      <section class="shot">
+        <div class="shot-label">
+          <h2>Timesheets</h2>
+          <p>Clock in via iPad, approve weekly, export straight to Xero.</p>
+        </div>
+        <div class="app-window">
+              <div class="app-window-body" data-mock="timesheets">
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true">
+                      <defs><linearGradient id="tick-g21" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
+                      <path d="M26 55 L38 67 L70 33" stroke="url(#tick-g21)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
+                    </svg>
+                    CROS<span class="cheq">CHEQ</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab active">Workforce</span>
+                    <span class="mk-nav-tab">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">AM</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Workforce / Timesheets</div>
+                  <h4 class="mk-title">Timesheets <span class="muted">· 6–12 Jul 2026</span></h4>
+                </div>
+
+                <div class="mk-banner">
+                  <div class="mk-banner-grid">
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Total hours</div>
+                      <div class="mk-metric-value">280<span class="pct"> hrs</span></div>
+                      <div class="mk-metric-sub">45 shifts this week</div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Wages cost</div>
+                      <div class="mk-metric-value">$11,540</div>
+                      <div class="mk-metric-sub">Incl. super &amp; workcover</div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Approved <span class="mk-metric-dot warn"></span></div>
+                      <div class="mk-metric-value">5<span class="pct"> / 45</span></div>
+                      <div class="mk-metric-sub">40 pending review</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mk-tabs">
+                  <span class="mk-tab active">All<span class="n">45</span></span>
+                  <span class="mk-tab">Needs review<span class="n">40</span></span>
+                  <span class="mk-tab">Approved<span class="n">5</span></span>
+                </div>
+
+                <div class="mk-ts">
+                  <div class="mk-ts-row">
+                    <span class="mk-ava">SM</span>
+                    <span class="mk-ts-info"><span class="mk-ts-name">Sophie M.</span><div class="mk-ts-meta">Casual · 1 shift · 4.50 hrs</div></span>
+                    <span class="mk-pill-pending">Pending</span>
+                    <span class="mk-btn-navy">Approve all</span>
+                  </div>
+                  <div class="mk-ts-row">
+                    <span class="mk-ava">DR</span>
+                    <span class="mk-ts-info"><span class="mk-ts-name">Daniel R.</span><div class="mk-ts-meta">Casual · 6 shifts · 34.25 hrs</div></span>
+                    <span class="mk-pill-pending">Pending</span>
+                    <span class="mk-btn-navy">Approve all</span>
+                  </div>
+                  <div class="mk-ts-row">
+                    <span class="mk-ava green">GW</span>
+                    <span class="mk-ts-info"><span class="mk-ts-name">Grace W.</span><div class="mk-ts-meta">Full time · 5 shifts · 38.00 hrs</div></span>
+                    <span class="mk-pill-approved">Approved</span>
+                    <span class="mk-btn-navy">View</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+      <section class="shot">
+        <div class="shot-label">
+          <h2>Purchasing</h2>
+          <p>Order by supplier or by product. AI reads invoices and posts to Xero.</p>
+        </div>
+        <div class="app-window">
+              <div class="app-window-body" data-mock="purchasing">
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true">
+                      <defs><linearGradient id="tick-g22" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
+                      <path d="M26 55 L38 67 L70 33" stroke="url(#tick-g22)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
+                    </svg>
+                    CROS<span class="cheq">CHEQ</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab">Workforce</span>
+                    <span class="mk-nav-tab active">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">AM</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Purchasing / Orders</div>
+                  <h4 class="mk-title">Place an order <span class="muted">· Riverside Provisions</span></h4>
+                </div>
+
+                <div class="mk-order">
+                  <div class="mk-order-items">
+                    <div class="mk-oi-head"><span>Product</span><span>Qty</span><span>Line total</span></div>
+                    <div class="mk-oi-row">
+                      <span><div class="mk-oi-prod">Olive oil 4L</div><div class="mk-oi-sku">SKU 21926</div></span>
+                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">6</span><span class="mk-oi-step">+</span></span>
+                      <span class="mk-oi-total"><div class="lt">$214.80</div><div class="up">$35.80/ea · GST-free</div></span>
+                    </div>
+                    <div class="mk-oi-row">
+                      <span><div class="mk-oi-prod">Plain flour 12.5kg</div><div class="mk-oi-sku">SKU 14127</div></span>
+                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">8</span><span class="mk-oi-step">+</span></span>
+                      <span class="mk-oi-total"><div class="lt">$176.00</div><div class="up">$22.00/ea · GST-free</div></span>
+                    </div>
+                    <div class="mk-oi-row">
+                      <span><div class="mk-oi-prod">Tomatoes tinned</div><div class="mk-oi-sku">SKU 18510</div></span>
+                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">24</span><span class="mk-oi-step">+</span></span>
+                      <span class="mk-oi-total"><div class="lt">$92.40</div><div class="up">$3.85/ea · GST-free</div></span>
+                    </div>
+                    <div class="mk-oi-row">
+                      <span><div class="mk-oi-prod">Butter unsalted 500g</div><div class="mk-oi-sku">SKU 14127</div></span>
+                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">10</span><span class="mk-oi-step">+</span></span>
+                      <span class="mk-oi-total"><div class="lt">$83.30</div><div class="up">$8.33/ea · GST-free</div></span>
+                    </div>
+                  </div>
+
+                  <div class="mk-summary">
+                    <div class="mk-summary-title">Summary</div>
+                    <div class="mk-sum-label">Delivery date</div>
+                    <div class="mk-sum-date">Wed, 8 Jul 2026</div>
+                    <div class="mk-sum-row"><span>Subtotal (ex GST)</span><span>$566.50</span></div>
+                    <div class="mk-sum-row"><span>GST</span><span>$0.00</span></div>
+                    <div class="mk-sum-row total"><span>Total</span><span>$566.50</span></div>
+                    <div class="mk-sum-btn">Send to supplier →</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+      <section class="shot">
+        <div class="shot-label">
+          <h2>Leave</h2>
+          <p>Requests, balances and approvals in one place.</p>
+        </div>
+        <div class="app-window">
+              <div class="app-window-body" data-mock="leave">
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true">
+                      <defs><linearGradient id="tick-g23" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
+                      <path d="M26 55 L38 67 L70 33" stroke="url(#tick-g23)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
+                    </svg>
+                    CROS<span class="cheq">CHEQ</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab active">Workforce</span>
+                    <span class="mk-nav-tab">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">AM</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Workforce / Leave</div>
+                  <h4 class="mk-title">Leave <span class="muted">· July 2026</span></h4>
+                </div>
+
+                <div class="mk-tabs">
+                  <span class="mk-tab">Approvals</span>
+                  <span class="mk-tab active">Calendar</span>
+                  <span class="mk-tab">Balances</span>
+                </div>
+
+                <div class="mk-legend">
+                  <span class="mk-leg"><span class="mk-leg-dot annual"></span>Annual</span>
+                  <span class="mk-leg"><span class="mk-leg-dot personal"></span>Personal</span>
+                  <span class="mk-leg"><span class="mk-leg-dot unpaid"></span>Unpaid</span>
+                  <span class="mk-leg"><span class="mk-leg-dot pending"></span>Pending</span>
+                </div>
+
+                <div class="mk-cal">
+                  <div class="mk-cal-dow"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+                  <div class="mk-cal-grid">
+                    <div class="mk-cal-cell muted"><span class="mk-cal-day">30</span></div>
+                    <div class="mk-cal-cell today"><span class="mk-cal-day">1</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">2</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">3</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">4</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">5</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">6</span></div>
+
+                    <div class="mk-cal-cell"><span class="mk-cal-day">7</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">8</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">9</span><span class="mk-cal-pill annual">Olivia · Annual</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">10</span><span class="mk-cal-pill annual">Olivia · Annual</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">11</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">12</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">13</span></div>
+
+                    <div class="mk-cal-cell"><span class="mk-cal-day">14</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">15</span><span class="mk-cal-pill personal">Daniel · Personal</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">16</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">17</span></div>
+                    <div class="mk-cal-cell"><span class="mk-cal-day">18</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">19</span></div>
+                    <div class="mk-cal-cell weekend"><span class="mk-cal-day">20</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+      <section class="shot">
+        <div class="shot-label">
+          <h2>Award interpretation</h2>
+          <p>Live award rates and penalties, auto-applied to every shift.</p>
+        </div>
+        <div class="app-window">
+              <div class="app-window-body" data-mock="award">
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true">
+                      <defs><linearGradient id="tick-g24" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
+                      <path d="M26 55 L38 67 L70 33" stroke="url(#tick-g24)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
+                    </svg>
+                    CROS<span class="cheq">CHEQ</span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Dashboard</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab active">Workforce</span>
+                    <span class="mk-nav-tab">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">AM</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Workforce / Awards</div>
+                  <h4 class="mk-title">Pay rates <span class="muted">· Level 3 Cook</span></h4>
+                  <p class="mk-pr-sub">Base rate plus award penalties, auto-applied based on shift times</p>
+                </div>
+
+                <div class="mk-pr">
+                  <div class="mk-pr-head"><span>Rate type</span><span>Multiplier</span><span>Hourly</span><span>Effective</span></div>
+                  <div class="mk-pr-row base">
+                    <span class="mk-pr-type">Weekday ordinary (incl. 25% casual loading)</span>
+                    <span class="mk-pr-mult">Base</span>
+                    <span class="mk-pr-rate">$33.38</span>
+                    <span class="mk-pr-eff">Mon – Fri</span>
+                  </div>
+                  <div class="mk-pr-row">
+                    <span class="mk-pr-type">Saturday</span>
+                    <span class="mk-pr-mult">×1.20</span>
+                    <span class="mk-pr-rate">$40.05</span>
+                    <span class="mk-pr-eff">All Saturday hours</span>
+                  </div>
+                  <div class="mk-pr-row">
+                    <span class="mk-pr-type">Sunday</span>
+                    <span class="mk-pr-mult">×1.40</span>
+                    <span class="mk-pr-rate">$46.73</span>
+                    <span class="mk-pr-eff">All Sunday hours</span>
+                  </div>
+                  <div class="mk-pr-row">
+                    <span class="mk-pr-type">Public holiday</span>
+                    <span class="mk-pr-mult">×2.00</span>
+                    <span class="mk-pr-rate">$66.75</span>
+                    <span class="mk-pr-eff">All public holiday hours</span>
+                  </div>
+                  <div class="mk-pr-row">
+                    <span class="mk-pr-type">Overtime · Mon–Fri, first 2 hrs</span>
+                    <span class="mk-pr-mult">×1.20</span>
+                    <span class="mk-pr-rate">$40.05</span>
+                    <span class="mk-pr-eff">Beyond 38 hrs/week</span>
+                  </div>
+                  <div class="mk-pr-row">
+                    <span class="mk-pr-type">Overtime · Mon–Fri, after 2 hrs</span>
+                    <span class="mk-pr-mult">×1.60</span>
+                    <span class="mk-pr-rate">$53.40</span>
+                    <span class="mk-pr-eff">Beyond 38 hrs/week</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+
+    <div class="integrations-block">
+      <div class="shot-label">
+        <h2>Integrations</h2>
+        <p>Works with the tools you already use.</p>
+      </div>
+      <div class="integ-grid">
+        <article class="integ-card">
+          <div class="integ-logo">
+            <span class="integ-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="6" width="18" height="12" rx="2" />
+                <path d="M3 10h18M7 14h4" />
+              </svg>
+            </span>
+          </div>
+          <h3 class="integ-name">Square</h3>
+          <p class="integ-body">
+            Daily sales sync straight from your POS, powering live wage-cost %
+            and revenue forecasts on every roster.
+          </p>
+        </article>
+
+        <article class="integ-card">
+          <div class="integ-logo">
+            <span class="integ-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 3h8l5 5v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+                <path d="M14 3v5h5M8 13h8M8 16h6" />
+              </svg>
+            </span>
+          </div>
+          <h3 class="integ-name">Xero</h3>
+          <p class="integ-body">
+            Push approved timesheets to payroll and post supplier invoices as
+            bills, synced back with bill numbers, no double entry.
+          </p>
+        </article>
+
+        <article class="integ-card integ-soon">
+          <div class="integ-logo"><span class="integ-logo-soon">+</span></div>
+          <h3 class="integ-name">More coming soon</h3>
+          <p class="integ-body">
+            We are adding integrations all the time. Tell us the tools your
+            venue runs on and we will wire them in.
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
