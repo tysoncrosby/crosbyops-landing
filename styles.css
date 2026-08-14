@@ -870,13 +870,8 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Apply page ────────────────────────────────────────────────── */
 
-.apply {
-  margin-bottom: 80px;
-}
-
 .apply-card {
   display: flex;
-  min-height: 620px;
 }
 
 .apply-panel {
@@ -1111,8 +1106,7 @@ select.form-input {
   .more-grid { grid-template-columns: repeat(2, 1fr); }
   .built-for, .contact { padding: 64px 20px; }
   .footer-inner { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
-  .apply { margin-bottom: 56px; }
-  .apply-card { flex-direction: column; min-height: 0; }
+  .apply-card { flex-direction: column; }
   .apply-panel { padding: 28px 24px; }
   .apply-panel-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
   .apply-panel-headline { font-size: 19px; margin-bottom: 20px; }
