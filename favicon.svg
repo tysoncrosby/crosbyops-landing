@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="Crosby Operations">
-  <title>Crosby Operations</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="16 18 64 64" fill="none" role="img" aria-label="CrosCheq">
+  <title>CrosCheq</title>
   <defs><linearGradient id="favicon-tick" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
   <path d="M26 55 L38 67 L70 33" stroke="url(#favicon-tick)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
 </svg>
