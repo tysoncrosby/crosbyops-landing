@@ -921,7 +921,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 15px;
   font-weight: 400;
   color: var(--navy);
-  background: var(--off-white);
+  background: var(--white);
   border: 1px solid var(--line-strong);
   border-radius: 10px;
   outline: none;
