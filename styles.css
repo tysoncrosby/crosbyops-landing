@@ -39,6 +39,13 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Sticky footer — on short pages (e.g. the request-access form) on a
+   tall/wide viewport, main would otherwise collapse to its content
+   height and leave the footer floating partway down instead of
+   pinned to the bottom. */
+body { display: flex; flex-direction: column; min-height: 100vh; }
+body > main { flex: 1 0 auto; }
+
 a { color: inherit; text-decoration: none; }
 
 .eyebrow {
