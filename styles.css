@@ -42,8 +42,15 @@ html, body {
 /* Sticky footer — on short pages (e.g. the request-access form) on a
    tall/wide viewport, main would otherwise collapse to its content
    height and leave the footer floating partway down instead of
-   pinned to the bottom. */
+   pinned to the bottom.
+   body > * gets an explicit width:100% because flex items with
+   auto cross-axis margins (e.g. header.nav's margin:0 auto) don't
+   stretch to fill by default — they shrink to content width instead,
+   which broke the nav/footer's max-width-and-centre layout. Forcing
+   width:100% here restores the plain-block behaviour those children
+   already relied on before body became a flex container. */
 body { display: flex; flex-direction: column; min-height: 100vh; }
+body > * { width: 100%; }
 body > main { flex: 1 0 auto; }
 
 a { color: inherit; text-decoration: none; }
