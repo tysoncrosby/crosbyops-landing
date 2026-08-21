@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /marketing-mockups.html
+
+Sitemap: https://croscheq.com/sitemap.xml
